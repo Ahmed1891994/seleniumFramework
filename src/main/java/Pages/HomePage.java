@@ -12,7 +12,9 @@ public class HomePage {
     //Set Links in the page
     private By Form_Authenticationlink = By.linkText("Form Authentication");
     private By Checkboxeslink = By.linkText("Checkboxes");
-
+    private By Hoverslink = By.linkText("Hovers");
+    private By Inputslink = By.linkText("Inputs");
+    
     //Constructor to instantiate the driver
     public HomePage(WebDriver driver)
     {
@@ -20,13 +22,27 @@ public class HomePage {
     }
 
     //Click on Form_Auth link
-    public void EnterLoginPage()
+    public LoginPage EnterLoginPage()
     {
         driver.findElement(Form_Authenticationlink).click();
+        return new LoginPage(driver);
     }
-    //Click on checkbox
-    public void EnterCheckboxPage()
+    //Click on checkbox link
+    public CheckBoxPage EnterCheckboxPage()
     {
         driver.findElement(Checkboxeslink).click();
+        return new CheckBoxPage(driver);
+    }
+   //Click on Hover link
+    public hoverPage EnterHovers()
+    {
+        driver.findElement(Hoverslink).click();
+        return new hoverPage(driver);
+    }
+  //Click on Inputs link
+    public InputsPage EnterInputs()
+    {
+        driver.findElement(Inputslink).click();
+        return new InputsPage(driver);
     }
 }

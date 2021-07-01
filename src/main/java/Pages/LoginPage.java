@@ -32,9 +32,10 @@ public class LoginPage {
         driver.findElement(passwordfield).clear();
         driver.findElement(passwordfield).sendKeys(password);
     }
-    public void ClickSubmitButton()
+    public SecureAreaPage ClickSubmitButton()
     {
         driver.findElement(button_login).click();
+        return new SecureAreaPage(driver);
     }
     public String GetFailedLoginText()
     {

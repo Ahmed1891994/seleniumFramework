@@ -7,7 +7,7 @@ import org.testng.annotations.*;
 
 public class TestBase {
     protected WebDriver driver;
-    public HomePage homepage;
+    protected HomePage homepage;
     @BeforeSuite
     public void SetUp()
     {
@@ -15,6 +15,7 @@ public class TestBase {
         driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/");
         driver.manage().window().maximize();
+        homepage = new HomePage(driver);
     }
     @AfterMethod
     public void ReturnToHome()
