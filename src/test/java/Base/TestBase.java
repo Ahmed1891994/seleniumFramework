@@ -6,8 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 
 public class TestBase {
-    protected WebDriver driver;
-    protected HomePage homepage;
+    public static WebDriver driver;
+    public static HomePage homepage;
     @BeforeSuite
     public void SetUp()
     {
