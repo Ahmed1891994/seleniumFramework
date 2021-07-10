@@ -14,27 +14,35 @@ public class CheckBoxPage {
         this.driver = driver;
     }
 
+    public boolean Ischeckbox1_Displayed()
+    {
+        return driver.findElement(checkbox1).isDisplayed();
+    }
+    public boolean Ischeckbox2_Displayed()
+    {
+        return driver.findElement(checkbox2).isDisplayed();
+    }
     public void SetCheckBox1()
     {
-        if(driver.findElement(checkbox1).getAttribute("Checked")==null)
+        if(!IsselectedCheckBox1())
             driver.findElement(checkbox1).click();
         else;
     }
     public void ClearCheckBox1()
     {
-        if(driver.findElement(checkbox1).getAttribute("Checked")!=null)
+        if(IsselectedCheckBox1())
             driver.findElement(checkbox1).click();
         else;
     }
     public void SetCheckBox2()
     {
-        if(driver.findElement(checkbox2).getAttribute("Checked")==null)
+        if(!IsselectedCheckBox2())
             driver.findElement(checkbox2).click();
         else;
     }
     public void ClearCheckBox2()
     {
-        if(driver.findElement(checkbox2).getAttribute("Checked")!=null)
+        if(IsselectedCheckBox2())
             driver.findElement(checkbox2).click();
         else;
     }

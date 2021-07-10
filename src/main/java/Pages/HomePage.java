@@ -14,7 +14,8 @@ public class HomePage {
     private By Checkboxeslink = By.linkText("Checkboxes");
     private By Hoverslink = By.linkText("Hovers");
     private By Inputslink = By.linkText("Inputs");
-    
+    private By Dropdownlink = By.linkText("Dropdown");
+
     //Constructor to instantiate the driver
     public HomePage(WebDriver driver)
     {
@@ -39,10 +40,17 @@ public class HomePage {
         driver.findElement(Hoverslink).click();
         return new hoverPage(driver);
     }
-  //Click on Inputs link
+   //Click on Inputs link
     public InputsPage EnterInputs()
     {
         driver.findElement(Inputslink).click();
         return new InputsPage(driver);
+    }
+
+    //Click on Inputs link
+    public DropDownPage EnterDropdown()
+    {
+        driver.findElement(Dropdownlink).click();
+        return new DropDownPage(driver);
     }
 }
