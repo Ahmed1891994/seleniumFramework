@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.concurrent.TimeUnit;
+
 public class HomePage {
     //Webdriver Variable
     private final WebDriver driver;
@@ -50,7 +52,17 @@ public class HomePage {
     //Click on Inputs link
     public DropDownPage EnterDropdown()
     {
-        driver.findElement(Dropdownlink).click();
+
+
+        try{
+            driver.findElement(Dropdownlink).click();
+        }
+        catch(org.openqa.selenium.WebDriverException e)
+        {
+            System.out.println("page down");
+        }
+
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         return new DropDownPage(driver);
     }
 }
