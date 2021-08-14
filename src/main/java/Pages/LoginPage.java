@@ -2,8 +2,6 @@ package Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
 
 public class LoginPage {
@@ -32,9 +30,10 @@ public class LoginPage {
         driver.findElement(passwordfield).clear();
         driver.findElement(passwordfield).sendKeys(password);
     }
-    public void ClickSubmitButton()
+    public SecureAreaPage ClickSubmitButton()
     {
         driver.findElement(button_login).click();
+        return new SecureAreaPage(driver);
     }
     public String GetFailedLoginText()
     {
