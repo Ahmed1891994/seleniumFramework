@@ -8,7 +8,7 @@ import org.apache.log4j.Logger;
 
 
 public class TestBase {
-    public static WebDriver driver;
+    public static WebDriver driver ;
     public static HomePage homepage;
     public static Logger logger;
     @BeforeSuite

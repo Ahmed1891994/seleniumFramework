@@ -11,7 +11,7 @@ public class DropDownTests extends TestBase {
     @Test(dataProvider = "numberofelementsDropDown")
     public void SelectElementbyindex(int itemnumber)
     {
-        dropdownpage = homepage.EnterDropdown();
+        dropdownpage = homepage.EnterDropdown() ;
 
         try {
             dropdownpage.ChooseItem(itemnumber);

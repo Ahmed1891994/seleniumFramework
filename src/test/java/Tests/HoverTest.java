@@ -20,7 +20,7 @@ public class HoverTest extends TestBase {
         hoverpage = homepage.EnterHovers();
         
         try {
-        	logger.info("Hover on element"+index);
+        	logger.info("Hover on element" + index);
             hoverpage.HoverImgIndex(index);
             
             logger.info("Check profile");

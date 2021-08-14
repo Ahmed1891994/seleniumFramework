@@ -140,7 +140,7 @@ public class CheckBoxTest extends TestBase {
 		logger.info("Enter Checkbox page");
 		checkboxpage = homepage.EnterCheckboxPage();
 		
-		logger.info("Check Checkbox2 Default");
+		logger.info("Check Checkbox2 Default") ;
 		Assert.assertTrue(checkboxpage.IsselectedCheckBox2());
 		
 		logger.info("clear Checkbox2");

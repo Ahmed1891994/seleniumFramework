@@ -10,7 +10,7 @@ public class LoginPageTest extends TestBase {
     LoginPage loginpage;
     SecureAreaPage secureareapage;
     
-    String username;
+    String username ;
     String password;
     @Test(enabled = true)
     public void SuccessfullLogin()
